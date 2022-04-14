@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：vue_and_axios_joke
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/14
+  Time(创建时间)： 21:24
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="vue.js"></script>
+    <script src="axios.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <div class="button_p">
+        <div class="animated fadeInDown">
+            <button @click="getJoke" class="button hvr-wobble-horizontal"><strong>获取一个笑话</strong></button>
+        </div>
+    </div>
+
+    <div class="result_p">
+       <div class="animated slideInUp">
+           <div class="result hvr-grow-shadow">
+               {{joke}}
+           </div>
+       </div>
+    </div>
+
+</div>
+
+<script>
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            joke: "笑话在这里显示",
+        }
+        ,
+        methods: {
+            getJoke: function ()
+            {
+                //console.log("调用")
+                var that = this;
+                //axios发起ajax请求
+                axios({
+                    //请求的方式：
+                    method: "get",
+                    //请求的url:
+                    url: "https://autumnfish.cn/api/joke",
+                    //url参数：
+                    params:
+                        {},
+                    //头信息：
+                    headers:
+                        {},
+                    //请求体参数：
+                    data:
+                        {},
+                }).then(response =>
+                {
+                    //console.log(response);
+                    that.joke = response.data;
+                })
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
