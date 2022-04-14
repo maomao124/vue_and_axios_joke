@@ -16,6 +16,8 @@ Project name(项目名称)：vue_and_axios_joke
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hover.css">
+    <link rel="stylesheet" href="animate.css">
     <script src="vue.js"></script>
     <script src="axios.js"></script>
 </head>
@@ -24,11 +26,11 @@ Project name(项目名称)：vue_and_axios_joke
 <div id="app">
 
     <div class="button_p">
-        <button @click="getJoke" class="button">获取一个笑话</button>
+        <button @click="getJoke" class="button hvr-wobble-horizontal"><strong>获取一个笑话</strong></button>
     </div>
 
     <div class="result_p">
-        <div class="result">
+        <div class="result hvr-grow-shadow">
             {{joke}}
         </div>
     </div>

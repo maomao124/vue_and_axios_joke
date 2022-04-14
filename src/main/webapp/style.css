@@ -9,25 +9,47 @@
   Version(版本): 1.0
   Description(描述)： 无
  */
-    
 
 
-body{
+body {
     background-color: #f7e6ff;
 }
 
-.button_p{
-
+.button_p {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -5%);
 }
 
-.result_p{
-
+.result_p {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -15%);
 }
 
-.button{
-
+.button {
+    width: 250px;
+    height: 70px;
+    border-radius: 30px;
+    border: 7px dotted lightskyblue;
+    background-color: #a0e5ff;
+    color: deepskyblue;
+    font-size: 24px;
 }
 
-.result{
+.result {
+    width: 75vw;
+    border-radius: 30px;
+    border: 7px dotted lightpink;
+    font-size: 24px;
+    color: deepskyblue;
+    background-color: #cfffd7;
+    min-height: 300px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
