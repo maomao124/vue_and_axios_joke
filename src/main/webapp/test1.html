@@ -26,13 +26,17 @@ Project name(项目名称)：vue_and_axios_joke
 <div id="app">
 
     <div class="button_p">
-        <button @click="getJoke" class="button hvr-wobble-horizontal"><strong>获取一个笑话</strong></button>
+        <div class="animated fadeInDown">
+            <button @click="getJoke" class="button hvr-wobble-horizontal"><strong>获取一个笑话</strong></button>
+        </div>
     </div>
 
     <div class="result_p">
-        <div class="result hvr-grow-shadow">
-            {{joke}}
-        </div>
+       <div class="animated slideInUp">
+           <div class="result hvr-grow-shadow">
+               {{joke}}
+           </div>
+       </div>
     </div>
 
 </div>
